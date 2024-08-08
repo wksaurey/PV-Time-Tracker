@@ -49,6 +49,10 @@ button:hover {
 	background-color: #D33F49;
 }
 
+.stop:hover {
+	background-color: #e17a81;
+}
+
 .hidden {
 	display: none;
 }
