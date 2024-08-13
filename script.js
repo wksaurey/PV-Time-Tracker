@@ -3,19 +3,19 @@ const buttons = {
 	pinky: {
 		start: document.getElementById('pinky-button'),
 		stop: document.createElement('button'),
-		restart: document.createElement('button'),
+		reset: document.createElement('button'),
 		continue: document.createElement('button')
 	},
 	brain: {
 		start: document.getElementById('brain-button'),
 		stop: document.createElement('button'),
-		restart: document.createElement('button'),
+		reset: document.createElement('button'),
 		continue: document.createElement('button')
 	},
 	track: {
 		start: document.getElementById('track-button'),
 		stop: document.createElement('button'),
-		restart: document.createElement('button'),
+		reset: document.createElement('button'),
 		continue: document.createElement('button')
 	}
 };
@@ -46,9 +46,9 @@ Object.keys(buttons).forEach(key => {
 	buttons[key].stop.innerHTML = 'Stop';
 	buttons[key].stop.classList.add('stop');
 
-	// Initialize restart button
-	buttons[key].restart.innerHTML = 'Restart';
-	buttons[key].restart.classList.add('restart');
+	// Initialize reset button
+	buttons[key].reset.innerHTML = 'Reset';
+	buttons[key].reset.classList.add('reset');
 
 	// Initialize continue button
 	buttons[key].continue.innerHTML = 'Continue';
@@ -57,19 +57,19 @@ Object.keys(buttons).forEach(key => {
 	// Set initial visibility
 	buttons[key].start.style.display = 'block';
 	buttons[key].stop.style.display = 'none';
-	buttons[key].restart.style.display = 'none';
+	buttons[key].reset.style.display = 'none';
 	buttons[key].continue.style.display = 'none';
 
 	// Append new buttons to the DOM
 	// Append new buttons to the DOM
 	document.getElementById(`${key}-buttons`).appendChild(buttons[key].stop);
-	document.getElementById(`${key}-buttons`).appendChild(buttons[key].restart);
+	document.getElementById(`${key}-buttons`).appendChild(buttons[key].reset);
 	document.getElementById(`${key}-buttons`).appendChild(buttons[key].continue);
 
 	// Add event listeners
 	buttons[key].start.addEventListener('click', () => startTimer(key));
 	buttons[key].stop.addEventListener('click', () => stopTimer(key));
-	buttons[key].restart.addEventListener('click', () => resetTimer(key));
+	buttons[key].reset.addEventListener('click', () => resetTimer(key));
 	buttons[key].continue.addEventListener('click', () => continueTimer(key));
 });
 
@@ -80,7 +80,7 @@ function startTimer(key) {
 
 	buttons[key].start.style.display = 'none';
 	buttons[key].stop.style.display = 'block';
-	buttons[key].restart.style.display = 'none';
+	buttons[key].reset.style.display = 'none';
 	buttons[key].continue.style.display = 'none';
 }
 
@@ -91,7 +91,7 @@ function stopTimer(key) {
 
 	buttons[key].start.style.display = 'none';
 	buttons[key].stop.style.display = 'none';
-	buttons[key].restart.style.display = 'block';
+	buttons[key].reset.style.display = 'block';
 	buttons[key].continue.style.display = 'block';
 }
 
@@ -104,7 +104,7 @@ function resetTimer(key) {
 
 	buttons[key].start.style.display = 'block';
 	buttons[key].stop.style.display = 'none';
-	buttons[key].restart.style.display = 'none';
+	buttons[key].reset.style.display = 'none';
 	buttons[key].continue.style.display = 'none';
 }
 
@@ -115,7 +115,7 @@ function continueTimer(key) {
 
 	buttons[key].start.style.display = 'none';
 	buttons[key].stop.style.display = 'block';
-	buttons[key].restart.style.display = 'none';
+	buttons[key].reset.style.display = 'none';
 	buttons[key].continue.style.display = 'none';
 }
 
