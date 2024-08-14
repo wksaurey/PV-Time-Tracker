@@ -1,0 +1,14 @@
+{
+  "name": "pv_time_tracker",
+  "version": "1.0.0",
+  "description": "pv time tracker server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Kolter Saurey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
