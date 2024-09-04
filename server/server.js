@@ -1,7 +1,7 @@
 const express = require('express');
 const {readFile, readFileSync} = require('fs').promises;
 const app = express();
-app.use(express.static('../client'));
+app.use(express.static('../client/static'));
 
 const PORT = 3000;
 app.listen(PORT, () => {
